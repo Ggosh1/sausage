@@ -1,4 +1,4 @@
-package com.yandex.practicum.devops.controller;
+epackage com.yandex.practicum.devops.controller;
 
 import com.yandex.practicum.devops.dto.OrderProductDto;
 import com.yandex.practicum.devops.exception.ResourceNotFoundException;
