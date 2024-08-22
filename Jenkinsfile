@@ -22,7 +22,7 @@ pipeline {
             post {
                 success {
                     junit allowEmptyResults: true, testResults: '**/test-results/*.xml' // Передадим результаты тестов в Jenkins
-                    sh 'curl -X POST -H "Content-Type:multipart/form-data" -F chat_id=1250917035 -F text="Сборка завершена" "https://api.telegram.org/bot7334219514:AAF1YF1hYBq5robJtgFXYyI_2hy2LTbJZmE/sendMessage"'
+                    shell 'curl -X POST -H "Content-Type:multipart/form-data" -F chat_id=1250917035 -F text="Сборка завершена" "https://api.telegram.org/bot7334219514:AAF1YF1hYBq5robJtgFXYyI_2hy2LTbJZmE/sendMessage"'
                     sh 'echo "bebra"'
                 }
             }
