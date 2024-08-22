@@ -29,8 +29,8 @@ pipeline {
         stage('Build frontend') {
             steps {
                 dir("frontend") {
-                    sh 'npm install' // Для фронта сначала загрузим все сторонние зависимости
-                    sh 'npm run build' // Запустим сборку
+                    shell 'npm install' // Для фронта сначала загрузим все сторонние зависимости
+                    shell 'npm run build' // Запустим сборку
                 }
             }
         }
@@ -42,7 +42,7 @@ pipeline {
             }
             post{
                 success{
-                    sh 'curl -X POST -H "Content-Type:multipart/form-data" -F chat_id=1250917035 -F text="Сборка завершена" "https://api.telegram.org/bot7334219514:AAF1YF1hYBq5robJtgFXYyI_2hy2LTbJZmE/sendMessage"'
+                    shell 'curl -X POST -H "Content-Type:multipart/form-data" -F chat_id=1250917035 -F text="Сборка завершена" "https://api.telegram.org/bot7334219514:AAF1YF1hYBq5robJtgFXYyI_2hy2LTbJZmE/sendMessage"'
                 }
             }
         }
