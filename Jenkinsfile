@@ -48,7 +48,7 @@ pipeline {
             }
             post{
                 success{
-                    sh 'curl -X POST -H "Content-Type:multipart/form-data" -F chat_id=1250917035 -F text="Сборка завершена" "https://api.telegram.org/bot7334219514:AAF1YF1hYBq5robJtgFXYyI_2hy2LTbJZmE/sendMessage"'
+                    sh 'curl -X POST -H "Content-Type:multipart/form-data" -F chat_id=1250917035 -F text="Сборка завершена" "https://api.telegram.org/bot7334219514:AAF1YF1hYBq5robJtgFXYyI_2hy2LTbJZmE/sendMessage"' encoding: 'UTF-8'
                 }
             }
         }
