@@ -37,11 +37,11 @@ pipeline {
         
         stage('Save artifacts') {
             steps {
+                archiveArtifacts(artifactsb: '*.jar')
                 archiveArtifacts(artifacts: 'frontend/*')
             }
             post{
                 success{
-                    archiveArtifacts(artifacts: 'backend/target/sausage-store-0.0.1-SNAPSHOT.jar')
                     shell 'curl -X POST -H "Content-Type:multipart/form-data" -F chat_id=1250917035 -F text="Сборка завершена" "https://api.telegram.org/bot7334219514:AAF1YF1hYBq5robJtgFXYyI_2hy2LTbJZmE/sendMessage"'
                 }
             }
