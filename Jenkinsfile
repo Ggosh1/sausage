@@ -1,4 +1,5 @@
 pipeline {
+    PATH = 'PATH' + ';c:\\Windows\\System32'
     agent any // Выбираем Jenkins агента, на котором будет происходить сборка: нам нужен любой
 
     triggers {
