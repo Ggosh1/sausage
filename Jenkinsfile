@@ -37,7 +37,7 @@ pipeline {
         
         stage('Save artifacts') {
             steps {
-                archiveArtifacts(artifactsb: '*.jar')
+                archiveArtifacts(artifacts: '*.jar')
                 archiveArtifacts(artifacts: 'frontend/*')
             }
             post{
