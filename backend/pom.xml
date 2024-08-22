@@ -57,7 +57,7 @@
     <build>
         <plugins>
             <plugin>
-                <sourceDirectory>backend/target</sourceDirectory>
+                <sourceDirectory>backend</sourceDirectory>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
