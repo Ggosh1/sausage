@@ -21,7 +21,7 @@ pipeline {
 
             post {
                 success {
-                    junit 'backend/target/surefire-reports/**/*.xml' // Передадим результаты тестов в Jenkins
+                    junit allowEmptyResults: true, testResults: '**/test-results/*.xml' // Передадим результаты тестов в Jenkins
                 }
             }
         }
